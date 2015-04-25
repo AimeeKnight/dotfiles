@@ -87,3 +87,5 @@ noremap <C-l> <C-w>l
 noremap <C-t> :tabn<cr>
 noremap <C-n> :tabnew<cr>
 
+" spellcheck
+autocmd BufRead,BufNewFile *.md setlocal spell
