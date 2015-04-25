@@ -87,5 +87,8 @@ noremap <C-l> <C-w>l
 noremap <C-t> :tabn<cr>
 noremap <C-n> :tabnew<cr>
 
-" spellcheck
+" markdown spellcheck
 autocmd BufRead,BufNewFile *.md setlocal spell
+
+" markdown wrap
+au BufRead,BufNewFile *.md setlocal textwidth=80
