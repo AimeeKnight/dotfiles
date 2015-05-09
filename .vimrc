@@ -1,5 +1,21 @@
 " http://vimdoc.sourceforge.net/htmldoc/options.html
 
+" syntastic setup
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['jscs', 'jshint']
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
+let g:syntastic_html_tidy_blocklevel_tags = ['billing-form']
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['.html'] }
+
 set nocompatible                                 " be iMproved
 filetype off                                     " required!
 
@@ -8,6 +24,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'groenewege/vim-less'
@@ -91,3 +108,9 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 
 " markdown wrap
 au BufRead,BufNewFile *.md setlocal textwidth=80
+
+" highlight json as js
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
+" to run syntastic
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
