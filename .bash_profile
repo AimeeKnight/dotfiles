@@ -24,8 +24,14 @@ alias startmongo='mongod --config ~/.mongodb.conf'
 
 export PATH=$RVM_PATH:$GIT_PATH:$NODE_PATH:$MONGODB_PATH:$REDIS_PATH:$PATH
 export EDITOR=vim
+
+### Tell ls to be colourful
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
 export PS1="$txtcyn\u$txtred@$txtgrn\h$txtred \w$txtblk >$txtrst "
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
