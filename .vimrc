@@ -31,6 +31,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'mileszs/ack.vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
+Bundle 'leafgarland/typescript-vim'
 
 filetype plugin indent on
 syntax on
