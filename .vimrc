@@ -117,3 +117,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " to run syntastic
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
+" browser and node console.log snippets
+imap cll console.log();<Esc>==f(
+imap scll console.log(JSON.stringify(, null, 2));<Esc>==f(
