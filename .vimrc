@@ -34,6 +34,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'bling/vim-airline'
+Bundle 'othree/yajs.vim'
 
 filetype plugin indent on
 syntax on
