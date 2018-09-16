@@ -1,0 +1,38 @@
+[user]
+name = Aimee Knight
+email = aimeemarieknight@gmail.com
+[color]
+ui = true
+[color "branch"]
+current = yellow bold
+local = green bold
+remote = cyan bold
+[color "diff"]
+meta = yellow
+frag = magenta bold
+old = red bold
+new = green bold
+whitespace = red reverse
+commit = yellow bold
+[color "status"]
+added = green bold
+changed = yellow bold
+untracked = red bold
+[alias]
+co = checkout
+st = status
+#[core]
+#	pager = diff-so-fancy | less --tabs=4 -RFX
+[color "diff-highlight"]
+oldNormal = red bold
+oldHighlight = red bold 52
+newNormal = green bold
+newHighlight = green bold 22
+[core]
+excludesfile = /Users/aimeeknight/.gitignore_global
+[difftool "sourcetree"]
+cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+path =
+[mergetool "sourcetree"]
+cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+trustExitCode = true
